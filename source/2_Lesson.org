@@ -5,13 +5,13 @@
 #+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil html-style:nil
 
-#+TITLE: Touring Turing
-#+AUTHOR: Marc Scott
+#+TITLE: An introduction to Breadboards
+#+AUTHOR: Stephen Brown
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/7-CS-Turing">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/7-SC-boards">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -92,140 +92,71 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Manipulating Variable Values
+* Getting stuck in
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Learn It
+** Try It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
+:HTML_CONTAINER_CLASS: try
 :END:
-- Last lesson you used Python to perform some calculations.
-- Let's have a quick test to see how well you remember how to perform calculations.
+- Last lesson you looked at a virtual board, to become familiar with how a breadboard is connected internally.
+- We'll now learn how to wire a breadboard so it works, and is neat. 
+- Ensure you have the following:
+   - Breadboard,
+   - Side cutters,
+   - Wire stripper,
+   - Long-nose pliers,
+   - About 15cm of red single-core wire,
+   - About 15cm of black single-core wire,
+   - 2x LEDs. Any colour, 3mm or 5mm,
+   - 2x 330 Ohm resistors,
+   - 1x 6x6 PTM switch.
+- We'll start with something you're familiar with; the first circuit from the previous lesson.
+[[./img/w1_bb6.png]]
+- Rather than mess around with PP3 batteries /(is it flat? Have I got it the right way around? Why aren't there enough batteries, etc)/, we'll power or circuit with a plug-in DC power supply that runs on the mains.
+- Take a short (e.g. 5cm-ish), and strip around 5mm of insulation from both ends. 
+- Use a pair of long-nose pliers to bend one of the stripped ends by 90 degrees. While it's tempting to bend it with your fingers, you won't be able to get the bend as neat. 
+[[./img/w2_1.jpg]]
+- Put the bent end in the top-right hole, and leave the remaining wire hanging off the end of the board. 
+- Repeat this with a piece of black wire, putting it in the very bottom-left corner hole.
+- When we want to test our circuit (once its built), we can just attach the red crocodile clip to positive, and the black to negative. 
+- By carefully trimming and bending the legs of your resistor, you can fit this flat to the breadboard as per the diagram above.
+- Trim the legs of your LED so they have about 7mm protruding (remember that the negative leg of the LED has a flat edge on its body).
+- Finally, carefully measure and bend (with long-nose pliers) a piece of black single-core wire to neatly take it to the bottom row. 
+[[./img/w2_2.jpg]]
+- Power it up!
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- We'll add a PTM switch to the board, so that we've got the same circuit that went into our LED torch at the start of the year. 
+- Fetch a 6x6 PTM switch from the component racks, and take a moment to look at it. 
+[[./img/w2_3.png]]
+- These switches are made by having two hoops of metal side by side, with a gap between them. One of the hoops is emphasised in the picture above. 
+- When the button is pushed, a short piece of wire touches both hoops, closing the switch and allowing current to flow from one hoop to the other. 
+- Modify your circuit to include the switch, as shown below. The centre of a breadboard is designed to take components like chips and switches. You need to ensure that the switch is the right way around (so that the hoops in the switch run *vertically*). 
+[[./img/w2_4.jpg]]
+- Connect it to power, and give it a try!
+- The diagram below shows the circuit before the PTM is pushed (shown in blue) and the additional connections when the switch pushed (orange).
+[[./img/w2_5.jpg]] 
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-1. What is the sum of the following numbers - 5,1,4,9,12
-2. What is the product of the following numbers - 4,1,2,8,9,12
-3. What is the remainder of dividing 12 by 5
-4. What is 12% of 32
-5. If I add 6 to 4, multiply the answer by 10 and then raise to the power of 2, what is the answer.
-** Try It
-- Using variables can help us solve more complex problems.
-- Let's try and use variables to solve some trickier problems.
-- Let's imagine you're in a maths class and you are given the following problem.
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-#+begin_quote
-A chicken can lay a single egg, every day. If a chicken lives for seven years, what is the maximum number of eggs it can lay in it's lifetime?
-#+end_quote
-- We can use Python to help us work this out, using a few simple variables.
-#+begin_src python
-daysInYear = 365
-lifeTime = 7
-eggsPerDay = 1
-numberEggs = daysInYear * eggsPerDay * lifeTime 
-#+end_src
-- We started by assigning three variables to have integer values. Then we assigned a third variable (=numberEggs=) to be the result of multiplying (=*=) the previous variables together.
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-- Let's try another one.
-#+begin_quote
-A snake can slither 20cm in 15 minutes. How many hours would it take the snake to travel 100cm
-#+end_quote
-#+begin_src python
-distance = 100
-speed = 20/15
-time = distance/speed
-#+end_src
+- Create this circuit on a breadboard, and take a picture of it.
+[[./img/w2_6.png]]
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- These ones are even trickier.
-  1. A woodchuck can chuck 5 bits of wood in an hour. How long does it take a woodchuck to chuck 45 pieces of wood.
-  2. A peck is equal to 9 litres. If Peter picked a peck of pickled peppers and each pepper has a volume of 0.25 litres, how many pickled peppers did Peter pick.
-  3. A cannibal can nibble 9 cans in an hour. How many cans can nine cannibals nibble in ninety minutes
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- We can easily assign variables to other variables.
-#+begin_src python
-foo = 10
-bar = foo
-#+end_src
-- Let's find out what =bar= is now.
-#+begin_src python
-bar
-#+end_src
-- As you probably expected, it is now 10.
-- But what happens if we change =foo=
-#+begin_src python
-foo = 5
-#+end_src
-- What's bar now?
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- To see why =bar= stays at 10, we need to think about what happens when we use code like =bar = foo=. We'll talk in terms of a /sort of/ Turing Machine.
-- We start off with an empty tape and some empty cards.
-[[file:img/tape1.jpg]]
-- When we write =foo = 10= two things happen.
-  1. The value of 10 is stored on the tape in a certain box. In this case it is box number 4.
-  2. The card is then altered so it has the variable identifier and the box it points to.
-[[file:img/tape2.jpg]]
-- When we then write =bar = foo=, a second card is then used to indicate that =bar= points to the same box number as =foo=.
-[[file:img/tape3.jpg]]
-- Lastly, when we reassign =foo= the value of 5, a second box (in this case box 8) has 5 stored in it and =foo='s card is altered to now point to the new box.
-[[file:img/tape4.jpg]]
-- We can see that bar is still pointing to the value in address 4, which is the number 10.
+- Create this circuit on a breadboard, and take a picture of it.
+[[./img/w2_7.png]]
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- For each of the problems below - you may only use the variables stated in the problem. You can't use additional variables or values.
-- The first has been done for you as an example
-*** Example
-#+begin_src python
-foo = 10
-bar = 4
-baz = 0
-#+end_src
-- make =foo=, =bar= and =baz= all equal to 6.
-/Answer/
-#+begin_src python
-baz = foo - bar
-foo = baz
-bar = baz
-#+end_src
-*** Problem 1
-#+begin_src python
-foo = 10
-bar = 4
-#+end_src
-- Make =foo= and =bar= both equal to 6.
-*** Problem 2
-#+begin_src python
-foo = 10
-bar = 15
-baz = 3
-#+end_src
-- Make =foo= and =bar= both equal to 25 and =baz= equal to 22
-*** Problem 3
-#+begin_src python
-foo = 12
-bar = 3
-#+end_src
-- Make =foo= equal to 4 and =bar= equal to 12
-*** Problem 4
-#+begin_src python
-foo = 9
-bar = 4
-#+end_src
-- Make =foo= equal to 4 and =bar= equal to 9
+- This is an advanced form of the door buzzer that removes the need to use a switch. A user can simply touch the two stripped wires shown on the left-hand side of the circuit diagram, and the LED and buzzer will energise. 
+[[./img/w2_8.png]]
+- It uses a pair of NPN Transistors connected together, which multiplies their effect. This arrangement is called a Darlington Pair. 
+- You'll need to look up which leg of the transistor is which online in order to be able to build this. Get your teacher to check it before you turn it on!
