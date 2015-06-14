@@ -20,11 +20,6 @@
       <li><a href="2_Lesson.html">Week2</a></li>
       <li><a href="3_Lesson.html">Week3</a></li>
       <li><a href="4_Lesson.html">Week4</a></li>
-      <li><a href="5_Lesson.html">Week5</a></li>
-      <li><a href="6_Lesson.html">Week6</a></li>
-      <li><a href="7_Lesson.html">Week7</a></li>
-      <li><a href="assessment.html">Assessment</a></li>
-
     </ul>
   </div>
 #+END_HTML
@@ -115,18 +110,20 @@
 - Start by getting a 555 timer IC, and some red and black single-core wire. 
 - Look at your chip. ICs like the ones you'll use have a notch at one end (just like the notch in the diagram above) to help you locate which way up it goes. They also normally have a circle in one corner to help you locate pin (leg) 1. Place your 555 timer so that the notch is pointing to the left. 
 - *Tip:* Build the circuit slowly. While the circuit looks complex, as long as you focus on one leg at a time, the problem becomes more managable. I'd start with pins 1, 8 and 4, for instance. 
+[[./img/w4_2.jpg]]
 - *Tip:* Keep your wires neat. While its tempting to quickly throw wires on the board to solve it quickly, this makes it likely that you'll knock something loose as you get more components on the board. 
+- *Tip:* You don't need to pack all the components into the smallest possible space. You've got the entire board, after all.
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Build a working 555 timer circuit.
-- Photograph the finished board to collect the badge.
+- Create the board to the stage shown above, and add the wiring to pin 4, 8 and 3. 
+- Take a photo of your progress and upload it.
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Lay all the wires neatly, and the components flat against the board professionally. Your teacher will judge whether you've met the standard when marking your silver badge work.
+- Complete a working 555 timer breadboard.
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
