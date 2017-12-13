@@ -87,46 +87,45 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* The 555 timer
+* Capacitors
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-[[./img/555.jpg]]
-- Your newly acquired breadboard skills will come in handy over the next few years. Being able to quickly build and test new circuits will allow you to experiment and change components quickly to help you invent things. 
-- In this lesson, we'll look at your first IC (short for Integrated Circuit). 
-- ICs are complete circuits that are miniaturized so that they can be plugged straight into lerger circuit designs. We'll be using a 555 timer; a chip released in 1971, which is still incredibly popular today. 
-- Their popularity is such that it is estimated that over a billion of these ICs are manufactured every year!
-- The 555 timer allows circuits to conveniently use time to achieve all sorts of effects.
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-[[./img/w4_1.png]]
-- This is the circuit you're going to build.
-- Start by getting a 555 timer IC, and some red and black single-core wire. 
-- Look at your chip. ICs like the ones you'll use have a notch at one end (just like the notch in the diagram above) to help you locate which way up it goes. They also normally have a circle in one corner to help you locate pin (leg) 1. Place your 555 timer so that the notch is pointing to the left. 
-- *Tip:* Build the circuit slowly. While the circuit looks complex, as long as you focus on one leg at a time, the problem becomes more managable. I'd start with pins 1, 8 and 4, for instance. 
-[[./img/w4_2.jpg]]
-- *Tip:* Keep your wires neat. While its tempting to quickly throw wires on the board to solve it quickly, this makes it likely that you'll knock something loose as you get more components on the board. 
-- *Tip:* You don't need to pack all the components into the smallest possible space. You've got the entire board, after all.
+- You've now covered the basics of building a circuit on a breadboard. 
+- We'll now try building some different circuits, so you can improve your skills, and learn a few electronics concepts along the way.
+[[./img/w3_1a.png]]
+- We'll learn about a new component, called a *capacitor*. These come in different shapes and sizes, and act as a temporary store of electrical charge. Capacitance is measured in Farads.
+- Get a breadboard, and build this circuit.
+[[./img/w3_1.png]]
+- What do you notice happens when you push and release the switch?
+- Remove the capacitor and try again. 
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- When you pushed the switch, current is able to flow into the rest of the circuit, the capacitor very quickly charges with electrons and the LED illuminates.
+- When the switch is released, there is no more current from the battery flowing beyond the switch any more. When this happens, the capacitor releases its electrons into the circuit, through the LED and out to the negative end of the battery. This is why it doesn't go out immediately, but instead slowly dims as the capacitor discharges. If you use a higher value capacitor (e.g. 220\mu or 470\mu), the LED will stay lit for longer.
+- We can use capacitors in this way to give a time delay in a circuit.
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Create the board to the stage shown above, and add the wiring to pin 4, 8 and 3. 
-- Take a photo of your progress and upload it.
+- Build the circuit at the top of the page on a breadboard.
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Complete a working 555 timer breadboard.
-** Badge It - Platinum
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Modify the circuit to blink more quickly. 
-- You may be able to guess what to change, but you'll likely need to do a little research online to do this. 
+- This is the door buzzer circuit...
+[[./img/w3_2a.png]]
+- We can modify our door buzzer circuit by adding a one million Ohm (1M) resistor and a capacitor, to change the way the circuit behaves. The door buzzer has also been removed, to simplify things a little... 
+[[./img/w3_2.png]]
+- Build this circuit on a breadboard, and test it. Make sure you hold the PTM down for a few seconds when you connect it up. 
+- Capacitors prevent current from flowing past them in a circuit until they've charged up past about 66%. We're using this characteristic to get the effect you see here.
+- This is sometimes compared to the idea of a tap (the battery) filling a bucket (the capacitor). If the resistor wasn't there, this'd be the equivalent of having the water flow at full power into the bucket. It'd fill very quickly.
+- Adding increasingly large resistors is like turning rate of flow down to a trickle; it'll take much longer to fill the bucket.
+- Using a larger bucket (bigger capacitor values) is another way to increase the time it takes to fill.
+- Upload a photo of your board to collect the badge.

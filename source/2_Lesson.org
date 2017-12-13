@@ -5,8 +5,8 @@
 #+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil html-style:nil
 
-#+TITLE: An introduction to Breadboards
-#+AUTHOR: Stephen Brown
+#+TITLE: Breadboarding
+#+AUTHOR: Paul Dougall
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -23,6 +23,7 @@
     </ul>
   </div>
 #+END_HTML
+
 * COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -87,71 +88,117 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Getting stuck in
+e* Introduction
+[[file:img/pic.jpg]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: intro
+:END:
+** What are PIC chips?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+Peripheral Interface Controllers are small silicon chips which can be programmed to perform useful tasks.
+In school, we tend to use Genie branded chips, like the C08 model you will use in this project. Others (e.g. PICAXE) are available.
+PIC chips allow you connect different inputs (e.g. switches) and outputs (e.g. LEDs, motors and speakers), and to control them using flowcharts.
+Chips such as these can be found everywhere in consumer electronic products, from toasters to cars. 
+
+While they might not look like much, there is more computational power in a single PIC chip used in school than there was in the space shuttle that went to the moon in the 60's!
+** When would I use a PIC chip?
+Imagine you wanted to make a flashing bike light; using an LED and a switch alone, you'd need to manually push and release the button to get the flashing effect. A PIC chip could be programmed to turn the LED off and on once a second.
+In a board game, you might want to have an electronic dice to roll numbers from 1 to 6 for you. 
+In a car, a circuit is needed to ensure that the airbags only deploy when there is a sudden change in speed, AND the passenger is wearing their seatbelt, AND the front or rear bumper has been struck. PIC chips can carry out their instructions very quickly, performing around 1000 instructions per second - as such, they can react far more quickly than a person can. 
+* Introduction
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Try It
+- Follow the instructions to make a working prototype version of the Yr7 LED torch project.
+- You will need has 2 LEDs, a breadboard, two 330 ohm resistors and a 6X6 push to make switch.
+- You will also need single core wire – black and red, wire cutter and wire strippers.
+
+[[./img/bread1.png]]
+
+- Using the single core wire – black and red – cut and strip your wire to make your power leads. These will eventually connect to the power supply at 3V.
+
+[[./img/bread2.png]]
+
+
+- Wire them in. Best to give a 90 degree bend at the end. Try to keep them as flat to the board as possible. Black to the negative rail and red to the positive rail.
+
+[[./img/bread3.png]]
+
+[[./img/bread4.png]]
+
+** Let’s get connected
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+ 
+- Using the single core red wire make a short connector lead which is going to
+- Run from the positive rail into the rest of the board.
+
+[[./img/bread5.png]]
+
+- Note LED shown for scale and I used the wrong colour wire.
+
+[[./img/bread6.png]]
+
+- Insert your connector lead to the board.
+
+- Next add the LED. Remember they are dependent on being fitted with
+- The correct polarity so make sure the long leg is the positive.
+- Trim down the legs and insert to the board as shown. Flatten side is negative.
+
+[[./img/bread7.png]]
+[[./img/bread8.png]]
+[[./img/bread9.png]]
+
+** Mind the gap
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+- Add a push to make switch (P2M). They are not quite square so it will only fit one way round  across the gap. 
+- The first hoop needs to be inline with the LED’s negative leg. 
+
+[[./img/bread11.png]]
+
+** Resistance is not futile!
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- Why do we need a resistor?
+- Grad a load resistor. It needs to be a 330 ohm.
+Can you remember the values of the colour bands?
+
+[[./img/bread12.png]]
+
+
+- Insert the resistor into the board. It needs to connect from the second hoop of the P2M switch to the negative rail.
+
+[[./img/bread13.png]]
+
+** Blast off!
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+- Before plugging in double check your power supply is set to 3V.
+- Follow the path of the electrons and make sure everything links together.
+- Electrons will not flow unless they got somewhere to go.
+
+[[./img/bread14.png]]
+
+- When you are sure connect your power leads to the crocodile clips and switch on.
+
+** Challenges
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Last lesson you looked at a virtual board, to become familiar with how a breadboard is connected internally.
-- We'll now learn how to wire a breadboard so it works, and is neat. 
-- Ensure you have the following:
-   - Breadboard,
-   - Side cutters,
-   - Wire stripper,
-   - Long-nose pliers,
-   - About 15cm of red single-core wire,
-   - About 15cm of black single-core wire,
-   - 2x LEDs. Any colour, 3mm or 5mm,
-   - 2x 330 Ohm resistors,
-   - 1x 6x6 PTM switch.
-- We'll start with something you're familiar with; the first circuit from the previous lesson.
-[[./img/w1_bb6.png]]
-- Rather than mess around with PP3 batteries /(is it flat? Have I got it the right way around? Why aren't there enough batteries, etc)/, we'll power or circuit with a plug-in DC power supply that runs on the mains.
-- Take a short (e.g. 5cm-ish), and strip around 5mm of insulation from both ends. 
-- Use a pair of long-nose pliers to bend one of the stripped ends by 90 degrees. While it's tempting to bend it with your fingers, you won't be able to get the bend as neat. 
-[[./img/w2_1.jpg]]
-- Put the bent end in the top-right hole, and leave the remaining wire hanging off the end of the board. 
-- Repeat this with a piece of black wire, putting it in the very bottom-left corner hole.
-- When we want to test our circuit (once its built), we can just attach the red crocodile clip to positive, and the black to negative. 
-- By carefully trimming and bending the legs of your resistor, you can fit this flat to the breadboard as per the diagram above.
-- Trim the legs of your LED so they have about 7mm protruding (remember that the negative leg of the LED has a flat edge on its body).
-- Finally, carefully measure and bend (with long-nose pliers) a piece of black single-core wire to neatly take it to the bottom row. 
-[[./img/w2_2.jpg]]
-- Power it up!
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
-- We'll add a PTM switch to the board, so that we've got the same circuit that went into our LED torch at the start of the year. 
-- Fetch a 6x6 PTM switch from the component racks, and take a moment to look at it. 
-[[./img/w2_3.png]]
-- These switches are made by having two hoops of metal side by side, with a gap between them. One of the hoops is emphasised in the picture above. 
-- When the button is pushed, a short piece of wire touches both hoops, closing the switch and allowing current to flow from one hoop to the other. 
-- Modify your circuit to include the switch, as shown below. The centre of a breadboard is designed to take components like chips and switches. You need to ensure that the switch is the right way around (so that the hoops in the switch run *vertically*). 
-[[./img/w2_4.jpg]]
-- Connect it to power, and give it a try!
-- The diagram below shows the circuit before the PTM is pushed (shown in blue) and the additional connections when the switch pushed (orange).
-[[./img/w2_5.jpg]] 
-** Badge It - Silver
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Create this circuit on a breadboard, and take a picture of it.
-[[./img/w2_6.png]]
-** Badge It - Gold
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Create this circuit on a breadboard, and take a picture of it.
-[[./img/w2_7.png]]
-** Badge It - Platinum
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- This is an advanced form of the door buzzer that removes the need to use a switch. A user can simply touch the two stripped wires shown on the left-hand side of the circuit diagram, and the LED and buzzer will energise. 
-[[./img/w2_8.png]]
-- It uses a pair of NPN Transistors connected together, which multiplies their effect. This arrangement is called a Darlington Pair. 
-- You'll need to look up which leg of the transistor is which online in order to be able to build this. Get your teacher to check it before you turn it on!
+
+- Add a second LED to your prototype circuit so both LEDs switch on and off with the P2M switch.
+- Add a second LED to your prototype circuit so that one LED is permanently on and the other switches on and off with the P2M switch.
+- Make the Year 7 door buzzer
+- Use the 555 resource and build yourself a 555 flashing LED circuit
+- Make a download socket and you can start making the Year 8 PIC license and PIC die projects.
+- Other ideas... try[[http://www.instructables.com/id/Ten-Breadboard-Projects-For-Beginners/][ here.]]
+
+
+

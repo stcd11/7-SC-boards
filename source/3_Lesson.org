@@ -87,7 +87,7 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Capacitors
+* Getting stuck in
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -95,37 +95,63 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- You've now covered the basics of building a circuit on a breadboard. 
-- We'll now try building some different circuits, so you can improve your skills, and learn a few electronics concepts along the way.
-[[./img/w3_1a.png]]
-- We'll learn about a new component, called a *capacitor*. These come in different shapes and sizes, and act as a temporary store of electrical charge. Capacitance is measured in Farads.
-- Get a breadboard, and build this circuit.
-[[./img/w3_1.png]]
-- What do you notice happens when you push and release the switch?
-- Remove the capacitor and try again. 
-** Learn It
+- Last lesson you looked at a virtual board, to become familiar with how a breadboard is connected internally.
+- We'll now learn how to wire a breadboard so it works, and is neat. 
+- Ensure you have the following:
+   - Breadboard,
+   - Side cutters,
+   - Wire stripper,
+   - Long-nose pliers,
+   - About 15cm of red single-core wire,
+   - About 15cm of black single-core wire,
+   - 2x LEDs. Any colour, 3mm or 5mm,
+   - 2x 330 Ohm resistors,
+   - 1x 6x6 PTM switch.
+- We'll start with something you're familiar with; the first circuit from the previous lesson.
+[[./img/w1_bb6.png]]
+- Rather than mess around with PP3 batteries /(is it flat? Have I got it the right way around? Why aren't there enough batteries, etc)/, we'll power or circuit with a plug-in DC power supply that runs on the mains.
+- Take a short (e.g. 5cm-ish), and strip around 5mm of insulation from both ends. 
+- Use a pair of long-nose pliers to bend one of the stripped ends by 90 degrees. While it's tempting to bend it with your fingers, you won't be able to get the bend as neat. 
+[[./img/w2_1.jpg]]
+- Put the bent end in the top-right hole, and leave the remaining wire hanging off the end of the board. 
+- Repeat this with a piece of black wire, putting it in the very bottom-left corner hole.
+- When we want to test our circuit (once its built), we can just attach the red crocodile clip to positive, and the black to negative. 
+- By carefully trimming and bending the legs of your resistor, you can fit this flat to the breadboard as per the diagram above.
+- Trim the legs of your LED so they have about 7mm protruding (remember that the negative leg of the LED has a flat edge on its body).
+- Finally, carefully measure and bend (with long-nose pliers) a piece of black single-core wire to neatly take it to the bottom row. 
+[[./img/w2_2.jpg]]
+- Power it up!
+** Try It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
+:HTML_CONTAINER_CLASS: try
 :END:
-- When you pushed the switch, current is able to flow into the rest of the circuit, the capacitor very quickly charges with electrons and the LED illuminates.
-- When the switch is released, there is no more current from the battery flowing beyond the switch any more. When this happens, the capacitor releases its electrons into the circuit, through the LED and out to the negative end of the battery. This is why it doesn't go out immediately, but instead slowly dims as the capacitor discharges. If you use a higher value capacitor (e.g. 220\mu or 470\mu), the LED will stay lit for longer.
-- We can use capacitors in this way to give a time delay in a circuit.
+- We'll add a PTM switch to the board, so that we've got the same circuit that went into our LED torch at the start of the year. 
+- Fetch a 6x6 PTM switch from the component racks, and take a moment to look at it. 
+[[./img/w2_3.png]]
+- These switches are made by having two hoops of metal side by side, with a gap between them. One of the hoops is emphasised in the picture above. 
+- When the button is pushed, a short piece of wire touches both hoops, closing the switch and allowing current to flow from one hoop to the other. 
+- Modify your circuit to include the switch, as shown below. The centre of a breadboard is designed to take components like chips and switches. You need to ensure that the switch is the right way around (so that the hoops in the switch run *vertically*). 
+[[./img/w2_4.jpg]]
+- Connect it to power, and give it a try!
+- The diagram below shows the circuit before the PTM is pushed (shown in blue) and the additional connections when the switch pushed (orange).
+[[./img/w2_5.jpg]] 
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Build the circuit at the top of the page on a breadboard.
+- Create this circuit on a breadboard, and take a picture of it.
+[[./img/w2_6.png]]
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- This is the door buzzer circuit...
-[[./img/w3_2a.png]]
-- We can modify our door buzzer circuit by adding a one million Ohm (1M) resistor and a capacitor, to change the way the circuit behaves. The door buzzer has also been removed, to simplify things a little... 
-[[./img/w3_2.png]]
-- Build this circuit on a breadboard, and test it. Make sure you hold the PTM down for a few seconds when you connect it up. 
-- Capacitors prevent current from flowing past them in a circuit until they've charged up past about 66%. We're using this characteristic to get the effect you see here.
-- This is sometimes compared to the idea of a tap (the battery) filling a bucket (the capacitor). If the resistor wasn't there, this'd be the equivalent of having the water flow at full power into the bucket. It'd fill very quickly.
-- Adding increasingly large resistors is like turning rate of flow down to a trickle; it'll take much longer to fill the bucket.
-- Using a larger bucket (bigger capacitor values) is another way to increase the time it takes to fill.
-- Upload a photo of your board to collect the badge.
+- Create this circuit on a breadboard, and take a picture of it.
+[[./img/w2_7.png]]
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- This is an advanced form of the door buzzer that removes the need to use a switch. A user can simply touch the two stripped wires shown on the left-hand side of the circuit diagram, and the LED and buzzer will energise. 
+[[./img/w2_8.png]]
+- It uses a pair of NPN Transistors connected together, which multiplies their effect. This arrangement is called a Darlington Pair. 
+- You'll need to look up which leg of the transistor is which online in order to be able to build this. Get your teacher to check it before you turn it on!
