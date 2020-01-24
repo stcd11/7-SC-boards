@@ -123,7 +123,7 @@
 - You're now ready to build a circuit!
 - We'll start by building a cut down version of your LED torch.
 [[./img/w1_bb2.png]]
-- Start by grabbing some power. There's a *PP3 battery with clip*, located in *Offboard Components -> Power Supplies* at the bottom of the list. Place this to the left of your breadboard, and by clicking and dragging from the red (positive) terminal of the battery, connect to the top-right corner hole of the breadboard. Connect the black (negative) battery wire to the bottom-left corner. 
+- Start by grabbing some power. There's a *PP3 battery with clip*, located in *Offboard Components -> Power Supplies* at the bottom of the list. Place this to the left of your breadboard, and by clicking and dragging from the red (positive) terminal of the battery, connect to the top-left corner hole of the breadboard. Connect the black (negative) battery wire to the bottom-left corner. 
 [[./img/w1_bb3.png]]
 - You've now got power on your board. Current can flow along the red wire from the battery, then once it arrives at the breadboard, it can flow to all the holes in the top row of the breadboard. 
 - This isn't a complete circuit though. Electrons can't get to the negative end of the battery, and the circuit doesn't actually do anything yet. 
