@@ -1,0 +1,149 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil html-style:nil
+
+#+TITLE: An introduction to Breadboards
+#+AUTHOR: Stephen Brown
+
+#+BEGIN_HTML
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/stsb11/7-SC-boards">Fork me on GitHub</a>
+    </div>
+  </div>
+<div id="stickyribbon">
+    <ul>
+      <li><a href="1_Lesson.html">Week1</a></li>
+      <li><a href="2_Lesson.html">Week2</a></li>
+      <li><a href="3_Lesson.html">Week3</a></li>
+      <li><a href="4_Lesson.html">Week4</a></li>
+    </ul>
+  </div>
+#+END_HTML
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Breadboards
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+[[./img/title_b_board.jpg]]
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- In the early days of electronics, people realised that sometimes it is desirable to be able to create a temporary circuit, without needing to solder parts together, trim their legs and own an PCB etching facility costing several hundred pounds. 
+- One day, an electronic engineer took a wooden breadboard, and hammered lots of rows of nails into it. To build circuits, short pieces of wire were wrapped  around different nails, causing them to be electrically connected, and components could then be soldered to the wires, forming circuits.
+- Modern bread boards use a similar idea, but with rows of connected metal contacts inside a plastic case rather than nails. By pushing components into different rows, a complete circuit can be formed. 
+* Getting acquianted
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- In this unit, you're going to create some circuits on breadboards. 
+[[./img/breadboard_holes.png]]
+- /("Breadboard scheme" by Breadboard-144dpi.gif: en:User:Waveguyderivative work: McSush (talk) - Breadboard-144dpi.gif. Licensed under CC BY-SA 3.0 via Wikimedia Commons.)/
+- If you break a breadboard open, this is that you'd see inside. Essentially, lots of little strips of wire. We'll start by designing a 'virtual' breadboard on the computer, then you'll make the real thing.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Open up Circuit Wizard 3 and click *File -> New*
+- Double-click *Breadboard Circuit* from the list of options; it's towards the bottom.
+- On the right-hand side of the screen that appears, click on a *390-pin breadboard*, then click in the middle of the screen to place your board. 
+- Select the breadboard, and use the keyboard shortcut *Ctrl+R* to rotate it until the thin red line on the outermost edge is at the top of the screen.
+[[./img/w1_bb1.png]]
+- You're now ready to build a circuit!
+- We'll start by building a cut down version of your LED torch.
+[[./img/w1_bb2.png]]
+- Start by grabbing some power. There's a *PP3 battery with clip*, located in *Offboard Components -> Power Supplies* at the bottom of the list. Place this to the left of your breadboard, and by clicking and dragging from the red (positive) terminal of the battery, connect to the top-left corner hole of the breadboard. Connect the black (negative) battery wire to the bottom-left corner. 
+[[./img/w1_bb3.png]]
+- You've now got power on your board. Current can flow along the red wire from the battery, then once it arrives at the breadboard, it can flow to all the holes in the top row of the breadboard. 
+- This isn't a complete circuit though. Electrons can't get to the negative end of the battery, and the circuit doesn't actually do anything yet. 
+- Add a *10.2mm 330 Ohm resistor* to the breadboard, so that one leg is running from any of the holes on the top row into one of the columns below it. 
+[[./img/w1_bb4.png]]
+- The current now has the option to travel through the resistor, so that it arrives in the vertically arranged column shown above.
+[[./img/w1_bb5.png]]
+- To complete our circuit, we need to add a *5mm LED*. Don't forget that the curved edge of the LED (on the left-hand edge in my picture above) is the positive leg, and should be in the same column as the bottom of the resistor. The dots I've drawn now show that the current has a continous, unbroken route it can take from the battery, through the resistor and through the LED. We're nearly finished.
+[[./img/w1_bb6.png]]
+- By clicking and dragginin one of the empty holes above the negative leg of our LED, we can draw on a wire to take us to the bottom of our breadboard and on to the negative end of the battery. 
+- Click the 'Play' icon at the top of the Circuit Wizard window to see your work - the LED should light up, showing you've made the board correctly. 
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Create the circuit above on an actual breadboard using a resitor and an LED.
+- Take a photo and upload your work to [[https://bournetolearn.com/LoginForm.php][www.bournetolearn.com]]
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Recreate the circuit below on an actual breadboard.
+[[./img/w1_bb7.png]]
