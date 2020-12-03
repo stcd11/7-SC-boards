@@ -193,8 +193,6 @@ Can you remember the values of the colour bands?
 :HTML_CONTAINER_CLASS: try
 :END:
 - Complete the circuit above using the switch, LED and resistor.
-
-
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -206,3 +204,15 @@ Can you remember the values of the colour bands?
 [[./img/BC548_Pinout.jpg]]
 - The buzzer will also need to be connected correctly. The long leg is positive if the sticker on the top has been removed.
 [[./img/w1_bb9.png]]
+- See examples below,
+[[./img/Transistor_1.jpg]]
+[[./img/Transistor_2.jpg]]
+[[./img/Transistor_3.jpg]]
+[[./img/Transistor_4.jpg]]
+[[./img/Transistor_5.jpg]]
+[[./img/Transistor_6.jpg]]
+[[./img/Transistor_7.jpg]]
+[[./img/Transistor_8.jpg]]
+[[./img/Transistor_9.jpg]]
+[[./img/Transistor_10.jpg]]
+[[./img/Transistor_11.jpg]]

@@ -155,3 +155,11 @@
 [[./img/w2_8.png]]
 - It uses a pair of NPN Transistors connected together, which multiplies their effect. This arrangement is called a Darlington Pair. 
 - You'll need to look up which leg of the transistor is which online in order to be able to build this. Get your teacher to check it before you turn it on!
+- See examples below:
+[[./img/Darlington_1.jpg]]
+[[./img/Darlington_2.jpg]]
+[[./img/Darlington_3.jpg]]
+[[./img/Darlington_4.jpg]]
+[[./img/Darlington_5.jpg]]
+
+ 
